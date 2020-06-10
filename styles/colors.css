@@ -1,127 +1,55 @@
-#configForms form select.digit option[value="0"] {
-    background-color: var(--resistor-black);
+.bg-black {
+    background-color: #000000;
 }
 
-#configForms form select.digit option[value="1"] {
-    background-color: var(--resistor-brown);
+.bg-brown {
+    background-color: #a52c2c;
 }
 
-#configForms form select.digit option[value="2"] {
-    background-color: var(--resistor-red);
+.bg-red {
+    background-color: #ff0000;
 }
 
-#configForms form select.digit option[value="3"] {
-    background-color: var(--resistor-orange);
+.bg-orange {
+    background-color: #ffa500;
 }
 
-#configForms form select.digit option[value="4"] {
-    background-color: var(--resistor-yellow);
+.bg-yellow {
+    background-color: #ffff00;
 }
 
-#configForms form select.digit option[value="5"] {
-    background-color: var(--resistor-green);
+.bg-green {
+    background-color: #00b250;
 }
 
-#configForms form select.digit option[value="6"] {
-    background-color: var(--resistor-blue);
+.bg-blue {
+    background-color: #0071c2;
 }
 
-#configForms form select.digit option[value="7"] {
-    background-color: var(--resistor-violet);
+.bg-violet {
+    background-color: #ff00ff;
 }
 
-#configForms form select.digit option[value="8"] {
-    background-color: var(--resistor-grey);
+.bg-grey {
+    background-color: #717171;
 }
 
-#configForms form select.digit option[value="9"] {
-    background-color: var(--resistor-white);
+.bg-white {
+    background-color: #ffffff;
 }
 
-#configForms form select#colorFour option[value="0.01"] {
-    background-color: var(--resistor-silver);
+.bg-silver {
+    background-color: #dadada;
 }
 
-#configForms form select#colorFour option[value="0.1"] {
-    background-color: var(--resistor-gold);
+.bg-gold {
+    background-color: #e2d600;
 }
 
-#configForms form select#colorFour option[value="1"] {
-    background-color: var(--resistor-black);
+.txt-black {
+    color: black !important;
 }
 
-#configForms form select#colorFour option[value="10"] {
-    background-color: var(--resistor-brown);
-}
-
-#configForms form select#colorFour option[value="100"] {
-    background-color: var(--resistor-red);
-}
-
-#configForms form select#colorFour option[value="1000"] {
-    background-color: var(--resistor-orange);
-}
-
-#configForms form select#colorFour option[value="10000"] {
-    background-color: var(--resistor-yellow);
-}
-
-#configForms form select#colorFour option[value="100000"] {
-    background-color: var(--resistor-green);
-}
-
-#configForms form select#colorFour option[value="1000000"] {
-    background-color: var(--resistor-blue);
-}
-
-#configForms form select#colorFour option[value="10000000"] {
-    background-color: var(--resistor-violet);
-}
-
-#configForms form select#colorFive option[value="10%"] {
-    background-color: var(--resistor-silver);
-}
-
-#configForms form select#colorFive option[value="5%"] {
-    background-color: var(--resistor-gold);
-}
-
-#configForms form select#colorFive option[value="1%"] {
-    background-color: var(--resistor-brown);
-}
-
-#configForms form select#colorFive option[value="2%"] {
-    background-color: var(--resistor-red);
-}
-
-#configForms form select#colorFive option[value="0.5%"] {
-    background-color: var(--resistor-green);
-}
-
-#configForms form select#colorFive option[value="0.25%"] {
-    background-color: var(--resistor-blue);
-}
-
-#configForms form select#colorFive option[value="0.1%"] {
-    background-color: var(--resistor-violet);
-}
-
-#configForms form select#colorFive option[value="0.05%"] {
-    background-color: var(--resistor-grey);
-}
-
-#configForms form select#colorSix option[value="100ppm"] {
-    background-color: var(--resistor-brown);
-}
-
-#configForms form select#colorSix option[value="50ppm"] {
-    background-color: var(--resistor-red);
-}
-
-#configForms form select#colorSix option[value="15ppm"] {
-    background-color: var(--resistor-orange);
-}
-
-#configForms form select#colorSix option[value="25ppm"] {
-    background-color: var(--resistor-yellow);
+.txt-white {
+    color: white;
 }

@@ -1,17 +1,5 @@
 :root {
     --resistor-color: #fff2ca;
-    --resistor-black: #000000;
-    --resistor-brown: #a52c2c;
-    --resistor-red: #ff0000;
-    --resistor-orange: #ffa500;
-    --resistor-yellow: #ffff00;
-    --resistor-green: #00b250;
-    --resistor-blue: #0071c2;
-    --resistor-violet: #ff00ff;
-    --resistor-grey: #717171;
-    --resistor-white: #ffffff;
-    --resistor-silver: #dadada;
-    --resistor-gold: #e2d600;
 }
 
 html {
@@ -90,9 +78,9 @@ html {
 }
 
 #configForms form select {
-    color: black;
+    color: white;
 }
 
 #configForms form select option {
-    color: black;
+    color: white;
 }
