@@ -1,0 +1,98 @@
+:root {
+    --resistor-color: #fff2ca;
+    --resistor-black: #000000;
+    --resistor-brown: #a52c2c;
+    --resistor-red: #ff0000;
+    --resistor-orange: #ffa500;
+    --resistor-yellow: #ffff00;
+    --resistor-green: #00b250;
+    --resistor-blue: #0071c2;
+    --resistor-violet: #ff00ff;
+    --resistor-grey: #717171;
+    --resistor-white: #ffffff;
+    --resistor-silver: #dadada;
+    --resistor-gold: #e2d600;
+}
+
+html {
+    background-color: #1b1b1b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#resistor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#resistor .resistorBody {
+    margin-top: 10px;
+    height: 50px;
+    width: 15px;
+    background-color: var(--resistor-color);
+    float: left;
+}
+
+#resistor .leftBorder {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#resistor .rightBorder {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#resistor .resistorSide {
+    height: 70px;
+    width: 15px;
+    background-color: var(--resistor-color);
+    float: left;
+}
+
+#resistor .active-parameter {
+    border-left: black 1px solid;
+    border-right: black 1px solid;
+}
+
+#resistor .clear {
+    clear: both;
+}
+
+#configForms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#configForms form {
+    margin-bottom: 12px;
+}
+
+#configForms form label {
+    display: block;
+}
+
+#configForms form select {
+    width: 220px;
+    height: 22px;
+    border-radius: 4px;
+}
+
+#configForms form select {
+    color: black;
+}
+
+#configForms form select option {
+    color: black;
+}

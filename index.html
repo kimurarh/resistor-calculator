@@ -3,164 +3,141 @@
 <html lang="en">
 
     <head>
-
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <!-- My CSS -->
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/colors.css">
 
-        <title>Resistor Color Code Calculator</title>
-
-        <style>
-
-
-            .resistorBody {
-                margin-top: 10px;
-                height: 50px;
-                width: 15px;
-                background-color: grey;
-                float: left;
-            }
-
-            .leftBorder {
-                border-top-left-radius: 5px;
-                border-bottom-left-radius: 5px;
-            }
-
-            .rightBorder {
-                border-top-right-radius: 5px;
-                border-bottom-right-radius: 5px;
-            }
-
-            .resistorSide {
-                height: 70px;
-                width: 15px;
-                background-color: grey;
-                float: left;
-            }
-
-            .grey {
-                background-color: grey;
-                align-items: center;
-            }
-
-            .clear {
-                clear: both;
-            }
-
-        </style>
-
+        <title>Resistor Calculator</title>
     </head>
 
     <body>
 
-        <div id="resistor grey">
-
-            <div class="resistorSide leftBorder"></div>
-            <div class="resistorSide"></div>
-            <div class="resistorSide" id="parameter1"></div>
-            <div class="resistorSide rightBorder"></div>
-            <div class="resistorBody"></div>
-            <div class="resistorBody" id="parameter2"></div>
-            <div class="resistorBody"></div>
-            <div class="resistorBody" id="parameter3"></div>
-            <div class="resistorBody"></div>
-            <div class="resistorBody"></div>
-            <div class="resistorBody"></div>
-            <div class="resistorBody" id="parameter4"></div>
-            <div class="resistorBody"></div>
-            <div class="resistorBody"></div>
-            <div class="resistorBody" id="parameter5"></div>
-            <div class="resistorBody"></div>
-            <div class="resistorSide leftBorder"></div>
-            <div class="resistorSide" id="parameter6"></div>
-            <div class="resistorSide"></div>
-            <div class="resistorSide rightBorder"></div>
-            <div class="clear"></div>
-
+        <div id="main">
+            <h1>Resistor Calculator</h1>
         </div>
 
-        <form>
-            <label for="colorFirst">First color:</label>
-            <select name="colorFirst" id="colorFirst" onchange="changeColor('colorFirst', 'parameter1')">
-                <option value="red">Red</option>
-                <option value="blue">Blue</option>
-                <option value="green">Green</option>
-            </select>
-        </form>
+        <div id="resistor">
+            <p>
+                <span class="resistorSide leftBorder"></span>
+                <span class="resistorSide"></span>
+                <span class="resistorSide active-parameter" id="parameter1"></span>
+                <span class="resistorSide rightBorder"></span>
+                <span class="resistorBody"></span>
+                <span class="resistorBody active-parameter" id="parameter2"></span>
+                <span class="resistorBody"></span>
+                <span class="resistorBody active-parameter" id="parameter3"></span>
+                <span class="resistorBody"></span>
+                <span class="resistorBody"></span>
+                <span class="resistorBody"></span>
+                <span class="resistorBody active-parameter" id="parameter4"></span>
+                <span class="resistorBody"></span>
+                <span class="resistorBody"></span>
+                <span class="resistorBody active-parameter" id="parameter5"></span>
+                <span class="resistorBody"></span>
+                <span class="resistorSide leftBorder"></span>
+                <span class="resistorSide active-parameter" id="parameter6"></span>
+                <span class="resistorSide"></span>
+                <span class="resistorSide rightBorder"></span>
+            </p>
 
-        <form>
-            <label for="colorFirst">Second color:</label>
-            <select name="colorSecond" id="colorSecond" onchange="changeColor('colorSecond', 'parameter2')">
-                <option value="red">Red</option>
-                <option value="blue">Blue</option>
-                <option value="green">Green</option>
-            </select>
-        </form>
-
-        <form>
-            <label for="colorThird">Third color:</label>
-            <select name="colorThird" id="colorThird" onchange="changeColor('colorThird', 'parameter3')">
-                <option value="red">Red</option>
-                <option value="blue">Blue</option>
-                <option value="green">Green</option>
-            </select>
-        </form>
-
-        <form>
-            <label for="colorFourth">Fourth color:</label>
-            <select name="colorFourth" id="colorFourth" onchange="changeColor('colorFourth', 'parameter4')">
-                <option value="red">Red</option>
-                <option value="blue">Blue</option>
-                <option value="green">Green</option>
-            </select>
-        </form>
-
-        <form>
-            <label for="colorFifth">Fifth color:</label>
-            <select name="colorFifth" id="colorFifth" onchange="changeColor('colorFifth', 'parameter5')">
-                <option value="red">Red</option>
-                <option value="blue">Blue</option>
-                <option value="green">Green</option>
-            </select>
-        </form>
+            <p>Resistor: <span id="resistorValue"></span></p>
+        </div>
         
-        <form>
-            <label for="colorSixth">Sixth color:</label>
-            <select name="colorSixth" id="colorSixth" onchange="changeColor('colorSixth', 'parameter6')">
-                <option value="red">Red</option>
-                <option value="blue">Blue</option>
-                <option value="green">Green</option>
-            </select>
-        </form>
+        <div id="configForms">
+            <form>
+                <label for="colorOne">First Digit:</label>
+                <select name="colorOne" id="colorOne" class="digit" onchange="changeColorDigit('colorOne', 'parameter1')">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+            </form>
 
-        <script type="text/javascript">
+            <form>
+                <label for="colorTwo">Second Digit:</label>
+                <select name="colorTwo" id="colorTwo" class="digit" onchange="changeColorDigit('colorTwo', 'parameter2')">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+            </form>
 
-            function changeColor(formId, parameterId) {
-                var form = document.getElementById(formId);
-                var color = form.options[form.selectedIndex].text;
-                document.getElementById(parameterId).style.backgroundColor = color;
-            }
+            <form>
+                <label for="colorThree">Third Digit:</label>
+                <select name="colorThree" id="colorThree" class="digit" onchange="changeColorDigit('colorThree', 'parameter3')">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+            </form>
 
-            changeColor("colorFirst", "parameter1");
-            changeColor("colorSecond", "parameter2");
-            changeColor("colorThird", "parameter3");
-            changeColor("colorFourth", "parameter4");
-            changeColor("colorFifth", "parameter5");
-            changeColor("colorSixth", "parameter6");
-        </script>
+            <form>
+                <label for="colorFour">Multiplier:</label>
+                <select name="colorFour" id="colorFour" onchange="changeColorMultiplier('colorFour', 'parameter4')">
+                    <option value="0.01">0.01</option>
+                    <option value="0.1">0.1</option>
+                    <option value="1">1</option>
+                    <option value="10">10</option>
+                    <option value="100">100</option>
+                    <option value="1000">1k</option>
+                    <option value="10000">10k</option>
+                    <option value="100000">100k</option>
+                    <option value="1000000">1M</option>
+                    <option value="10000000">10M</option>
+                </select>
+            </form>
+
+            <form>
+                <label for="colorFive">Tolerance:</label>
+                <select name="colorFive" id="colorFive" onchange="changeColorTolerance('colorFive', 'parameter5')">
+                    <option value="10%">10%</option>
+                    <option value="5%">5%</option>
+                    <option value="1%">1%</option>
+                    <option value="2%">2%</option>
+                    <option value="0.5%">0.5%</option>
+                    <option value="0.25%">0.25%</option>
+                    <option value="0.1%">0.1%</option>
+                    <option value="0.05%">0.05%</option>
+                </select>
+            </form>
             
+            <form>
+                <label for="colorSix">Temperature Coefficient:</label>
+                <select name="colorSix" id="colorSix" onchange="changeColorTemperature('colorSix', 'parameter6')">
+                    <option value="100ppm">100ppm</option>
+                    <option value="50ppm">50ppm</option>
+                    <option value="15ppm">15ppm</option>
+                    <option value="25ppm">25ppm</option>
+                </select>
+            </form>
+        </div>
 
-
-
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
-        <!-- My Javascript-->
+        <script src="scripts/index.js"></script>
 
     </body>
 </html>
