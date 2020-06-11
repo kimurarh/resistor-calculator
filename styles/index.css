@@ -23,6 +23,11 @@ html {
     align-items: center;
 }
 
+#resistor h3 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
 #resistor .resistorBody {
     margin-top: 10px;
     height: 50px;
@@ -65,20 +70,17 @@ html {
 
 #configForms form {
     margin-bottom: 12px;
-}
-
-#configForms form label {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 #configForms form select {
     width: 220px;
     height: 22px;
     border-radius: 4px;
-}
-
-#configForms form select {
     color: white;
+
+    text-align-last: center;
 }
 
 #configForms form select option {
